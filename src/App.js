@@ -40,7 +40,7 @@ class App extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.handleForm = this.handleForm.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
 
   };
 
@@ -59,11 +59,9 @@ class App extends Component {
   };
 
 
-  handleForm(e) {
-    e.preventDefault();
-    this.setState({formSubmitted: true,})
-    
-  };
+  // handleSubmit() {
+  //   this.setState({formSubmitted: true,});
+  // };
 
 
 
@@ -73,31 +71,25 @@ class App extends Component {
 
       <React.Fragment>
 
-
-        { !this.state.formSubmitted ?  
-          <form onSubmit = {this.handleForm}>
-
             <ol>
               {this.state.players.map( (player, index) => 
                 <li key = {index} >{player}</li>)}
             </ol>
-
-            
 
             {this.state.players.length < 3 ? 
               <div>
               <input 
                 onChange = {this.handleChange} 
                 value = {this.state.name} 
-                type = "text" required
+                type = "text"
                 placeholder = "Player's name" />
               <button onClick = {this.handleClick}>Add Player</button>
               </div> : <button>Find out your Teams</button>
             }
 
-          </form> 
 
-          : <TeamScreen players={this.state.players} /> }
+
+          <TeamScreen players={this.state.players} />
 
 
 
