@@ -34,15 +34,18 @@ class TeamScreen extends Component {
 
 	render() {
 
-        let {finalPlayersList} = this.props;
+        let manteca = this.props.finalPlayersList;
 
         // let arry = ["Laura", "Pete", "Joe", "Tom", "Jack", "stranger"];
 
-        let teamShuffled = shufflePlayers({finalPlayersList}); //call the Fn to shuffle team members around
+        // let teamShuffled = shufflePlayers(manteca); //call the Fn to shuffle team members around
 
         // let teamA = teamShuffled; //extra step to make clear that the remaining of the splited arr (next step) will be storaged in this var
 
         // let teamB = teamShuffled.splice(teamShuffled.length/2); //teamB = removed items
+
+        let teamA = shufflePlayers(manteca);
+        let teamB = teamA.splice(teamA.length/2);
 
 
 
@@ -50,10 +53,10 @@ class TeamScreen extends Component {
 
 			<React.Fragment>
 
-				{/* NOT WORKING:
-				<p>{teamShuffled}</p> */}
 
-				<p>{finalPlayersList}</p>
+				<p>{teamA}</p>
+				<p>{teamB}</p>
+
 
 				
 			</React.Fragment>

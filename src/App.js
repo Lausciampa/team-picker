@@ -64,7 +64,7 @@ class App extends Component {
                 <li key = {index} >{player}</li>)}
             </ol>
 
-            {this.state.players.length < 4 ? 
+            {this.state.players.length < 8 ? 
               <div>
               <input 
                 onChange = {this.handleChange} 
