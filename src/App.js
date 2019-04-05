@@ -17,12 +17,12 @@ class App extends Component {
     this.state = {
       name: "",
       players: [],
-      formSubmitted: false,
+      // formSubmitted: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
 
   };
 
@@ -41,9 +41,9 @@ class App extends Component {
   };
 
 
-  handleSubmit() {
-    this.setState({formSubmitted: true,});
-  };
+  // handleSubmit() {
+  //   this.setState({formSubmitted: true,});
+  // };
 
 
 
@@ -78,8 +78,8 @@ class App extends Component {
 
           )} />
 
-          <Route path="/teams" render = { (props) => (
-            <TeamScreen {...props} />
+          <Route path="/teams" render = { () => (
+            <TeamScreen finalPlayersList = {this.state.players} />
 
           )} />
 

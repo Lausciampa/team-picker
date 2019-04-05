@@ -34,11 +34,11 @@ class TeamScreen extends Component {
 
 	render() {
 
-        let {players} = this.props;
+        let {finalPlayersList} = this.props;
 
-        let arry = ["Laura", "Pete", "Joe", "Tom", "Jack", "stranger"];
+        // let arry = ["Laura", "Pete", "Joe", "Tom", "Jack", "stranger"];
 
-        let teamShuffled = shufflePlayers({players}); //call the Fn to shuffle team members around
+        let teamShuffled = shufflePlayers({finalPlayersList}); //call the Fn to shuffle team members around
 
         // let teamA = teamShuffled; //extra step to make clear that the remaining of the splited arr (next step) will be storaged in this var
 
@@ -50,7 +50,10 @@ class TeamScreen extends Component {
 
 			<React.Fragment>
 
-				<p>{teamShuffled}</p>
+				{/* NOT WORKING:
+				<p>{teamShuffled}</p> */}
+
+				<p>{finalPlayersList}</p>
 
 				
 			</React.Fragment>
