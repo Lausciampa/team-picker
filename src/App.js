@@ -6,7 +6,7 @@ import TeamScreen from './Components/TeamScreen.js';
 import { 
   BrowserRouter as Router, 
   Route, 
-  Switch, } from "react-router-dom";
+  Link, } from "react-router-dom";
 
 
 class App extends Component {
@@ -51,14 +51,20 @@ class App extends Component {
   render() {
     return(
 
-      <React.Fragment>
+      <Router>
+
+        <React.Fragment> 
+
+          <Route exact path="/" render = { () => (
+
+            <div> 
 
             <ol>
               {this.state.players.map( (player, index) => 
                 <li key = {index} >{player}</li>)}
             </ol>
 
-            {this.state.players.length < 3 ? 
+            {this.state.players.length < 4 ? 
               <div>
               <input 
                 onChange = {this.handleChange} 
@@ -66,16 +72,20 @@ class App extends Component {
                 type = "text"
                 placeholder = "Player's name" />
               <button onClick = {this.handleClick}>Add Player</button>
-              </div> : <button onClick = {this.handleSubmit}>Find out your Teams</button>
+              </div> : <Link to="/teams"><button>Find out your Teams</button></Link>
             }
+            </div> 
 
+          )} />
 
+          <Route path="/teams" render = { (props) => (
+            <TeamScreen {...props} />
 
-          <TeamScreen players={this.state.players} />
+          )} />
 
+        </React.Fragment>
 
-
-      </React.Fragment>
+      </Router>
 
     );
   }

@@ -34,15 +34,15 @@ class TeamScreen extends Component {
 
 	render() {
 
-        // let {players} = this.props;
+        let {players} = this.props;
 
         let arry = ["Laura", "Pete", "Joe", "Tom", "Jack", "stranger"];
 
-        let teamShuffled = shufflePlayers(arry); //call the Fn to shuffle team members around
+        let teamShuffled = shufflePlayers({players}); //call the Fn to shuffle team members around
 
-        let teamA = teamShuffled; //extra step to make clear that the remaining of the splited arr (next step) will be storaged in this var
+        // let teamA = teamShuffled; //extra step to make clear that the remaining of the splited arr (next step) will be storaged in this var
 
-        let teamB = teamShuffled.splice(teamShuffled.length/2); //teamB = removed items
+        // let teamB = teamShuffled.splice(teamShuffled.length/2); //teamB = removed items
 
 
 
@@ -50,17 +50,7 @@ class TeamScreen extends Component {
 
 			<React.Fragment>
 
-				<ul>
-					{teamA.map( (player, index) => 
-						<li key = {index} >{player}</li>)}
-				</ul>
-
-				<br />
-
-				<ul>
-					{teamB.map( (player, index) => 
-						<li key = {index} >{player}</li>)}
-				</ul>
+				<p>{teamShuffled}</p>
 
 				
 			</React.Fragment>
