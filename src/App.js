@@ -1,5 +1,3 @@
-// import React, { Component } from 'react';
-// import logo from './logo.svg';
 // import './App.css';
 import React, { Component }  from 'react';
 // import Form from './Components/Form.js';
@@ -9,22 +7,6 @@ import {
   BrowserRouter as Router, 
   Route, 
   Switch, } from "react-router-dom";
-
-
-// const App = ({formSubmitted}) => (
-
-//   <React.Fragment>
-
-//     <Form />
-
-//     { formSubmitted ? null : <TeamScreen /> }
-
-//   </React.Fragment>
-
-// );
-
-// export default App;
-
 
 
 class App extends Component {
@@ -40,7 +22,7 @@ class App extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
   };
 
@@ -59,9 +41,9 @@ class App extends Component {
   };
 
 
-  // handleSubmit() {
-  //   this.setState({formSubmitted: true,});
-  // };
+  handleSubmit() {
+    this.setState({formSubmitted: true,});
+  };
 
 
 
@@ -84,7 +66,7 @@ class App extends Component {
                 type = "text"
                 placeholder = "Player's name" />
               <button onClick = {this.handleClick}>Add Player</button>
-              </div> : <button>Find out your Teams</button>
+              </div> : <button onClick = {this.handleSubmit}>Find out your Teams</button>
             }
 
 
