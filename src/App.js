@@ -1,7 +1,7 @@
-// import './App.css';
 import React, { Component }  from 'react';
-// import Form from './Components/Form.js';
 import TeamScreen from './Components/TeamScreen.js';
+import './styles/css/main.css';
+
 
 import { 
   BrowserRouter as Router, 
@@ -57,7 +57,7 @@ class App extends Component {
 
           <Route exact path="/" render = { () => (
 
-            <div> 
+            <div className="home-Background"> 
 
             <ol>
               {this.state.players.map( (player, index) => 

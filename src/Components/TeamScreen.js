@@ -34,18 +34,10 @@ class TeamScreen extends Component {
 
 	render() {
 
-        let manteca = this.props.finalPlayersList;
+        let players = this.props.finalPlayersList;
 
-        // let arry = ["Laura", "Pete", "Joe", "Tom", "Jack", "stranger"];
-
-        // let teamShuffled = shufflePlayers(manteca); //call the Fn to shuffle team members around
-
-        // let teamA = teamShuffled; //extra step to make clear that the remaining of the splited arr (next step) will be storaged in this var
-
-        // let teamB = teamShuffled.splice(teamShuffled.length/2); //teamB = removed items
-
-        let teamA = shufflePlayers(manteca);
-        let teamB = teamA.splice(teamA.length/2);
+        let teamA = shufflePlayers(players); //first half of the splited array
+        let teamB = teamA.splice(teamA.length/2); //second half (the chopped off one)
 
 
 
