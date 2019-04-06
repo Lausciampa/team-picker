@@ -57,23 +57,29 @@ class App extends Component {
 
           <Route exact path="/" render = { () => (
 
-            <div className="home-Background"> 
+            <div className="home-mainContainer"> 
 
-            <ol>
-              {this.state.players.map( (player, index) => 
+              <ol>
+                {this.state.players.map( (player, index) => 
                 <li key = {index} >{player}</li>)}
-            </ol>
+              </ol>
 
-            {this.state.players.length < 8 ? 
-              <div>
-              <input 
-                onChange = {this.handleChange} 
-                value = {this.state.name} 
-                type = "text"
-                placeholder = "Player's name" />
-              <button onClick = {this.handleClick}>Add Player</button>
-              </div> : <Link to="/teams"><button>Find out your Teams</button></Link>
-            }
+              
+
+
+              {this.state.players.length < 8 ? 
+              <div className="home-formContainer">
+                <input 
+                  onChange = {this.handleChange} 
+                  value = {this.state.name} 
+                  type = "text"
+                  placeholder = "Player's name" 
+                  maxlength = "40" 
+                  size = "25"/> 
+                <br />
+                <button onClick = {this.handleClick} className="button">ADD PLAYER</button>
+              </div> : <Link to="/teams"><button className="button">Find out your Teams</button></Link>
+              }
             </div> 
 
           )} />

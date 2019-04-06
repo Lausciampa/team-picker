@@ -1,7 +1,39 @@
-.home-Background {
+.home-mainContainer {
   background-image: linear-gradient(#3D1200, #FF5A14, #A9DD66);
+  background-image: url("../assets/home-BackgroundImg.jpg");
   margin: 0px auto;
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 1400px;
-  height: 800px; }
+  background-size: cover;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.home-formContainer {
+  text-align: center; }
+
+button {
+  font-family: 'Viga', sans-serif;
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 0px;
+  margin: 15px;
+  transition: background-color 0.2s ease;
+  background-color: #68a2ff; }
+
+button:hover {
+  background-color: pink; }
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2rem; }
+
+.home-PlayersList {
+  background-color: white;
+  border-radius: 8px; }
+
+ol {
+  margin: 0px; }

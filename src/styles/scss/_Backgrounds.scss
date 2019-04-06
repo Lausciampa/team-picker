@@ -1,23 +1,21 @@
 
-// body {
-// 	background-image:
-// 		linear-gradient(#3D1200, #FF5A14, #A9DD66);
-// }
-
-
 ////////////////////// HOME PAGE
 
-.home-Background {
+.home-mainContainer {
 	background-image:
 		linear-gradient(#3D1200, #FF5A14, #A9DD66);
-	// background-image: url('../assets/home-BackgroundImg.jpg');
+	background-image: url('../assets/home-BackgroundImg.jpg');
 	margin: 0px auto;
 	background-repeat: no-repeat;
-	background-size: contain;
-	width: 1400px;
-	height: 800px;
+	background-size: cover;
+	height: 750px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-	
 
 
+.home-formContainer {
+	text-align: center;
 }

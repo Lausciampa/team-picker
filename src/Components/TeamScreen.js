@@ -45,9 +45,17 @@ class TeamScreen extends Component {
 
 			<React.Fragment>
 
+				<ol>
+					{teamA.map( (player, index) => 
+					<li key = {index} >{player}</li>)}
+				</ol>
 
-				<p>{teamA}</p>
-				<p>{teamB}</p>
+				<br />
+
+				<ol>
+					{teamB.map( (player, index) => 
+					<li key = {index} >{player}</li>)}
+				</ol>
 
 
 				
