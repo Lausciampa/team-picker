@@ -18,56 +18,30 @@ function shufflePlayers(arr) {
 };
 
 
+const TeamScreen = ({ finalPlayersList }) => {
 
-class TeamScreen extends Component {
+    let teamA = shufflePlayers(finalPlayersList); //first half of the splited array
+    let teamB = teamA.splice(teamA.length/2); //second half (the chopped off one)
 
-	constructor(props){
-		super(props);
+	return (
 
-		this.state = {
-			teamA: [],
-			teamB: [],
-		};
-	};
+		<React.Fragment>
 
+			<ol>
+				{teamA.map( (player, index) => 
+				<li key = {index} >{player}</li>)}
+			</ol>
 
+			<br />
 
-	render() {
-
-        let players = this.props.finalPlayersList;
-
-        let teamA = shufflePlayers(players); //first half of the splited array
-        let teamB = teamA.splice(teamA.length/2); //second half (the chopped off one)
-
-
-
-		return (
-
-			<React.Fragment>
-
-				<ol>
-					{teamA.map( (player, index) => 
-					<li key = {index} >{player}</li>)}
-				</ol>
-
-				<br />
-
-				<ol>
-					{teamB.map( (player, index) => 
-					<li key = {index} >{player}</li>)}
-				</ol>
-
-
-				
-			</React.Fragment>
-
-
-
-		);
-	};
-
+			<ol>
+				{teamB.map( (player, index) => 
+				<li key = {index} >{player}</li>)}
+			</ol>
+			
+		</React.Fragment>
+	);
 };
-
 
 export default TeamScreen;
 
