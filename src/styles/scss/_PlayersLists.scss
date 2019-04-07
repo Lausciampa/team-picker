@@ -4,9 +4,80 @@
 .home-PlayersList {
 	background-color: white;
 	border-radius: 8px;
+}
+
+
+.home-PlayersContainer li {
+	padding: 5px 10px;
+	list-style: none;
+	font-size: 1em;
+}
+
+ul {
+	background-color: white;
+	opacity: 0.65;
+	border-radius: 20px;
+	margin-left: 0px;
+	margin-top: 5%;
+	padding: 20px;
+}
+
+
+
+
+
+////////////////////// TEAMS PAGE
+
+
+.teamScreen-Container{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+
+.teamScreen-Container::before {
+	background-image:
+		linear-gradient(#2F00B2, #8154FF, #A9DD66);
+	background-image: url('../assets/teams-BackgroundImg.jpg');
+	background-size: cover;
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+	filter: blur(1px) brightness(0.9);
+}
+
+
+.players-Container {
+	background-color: #FFF8E5;
+	opacity: 0.55;
+	border-radius: 20px;
+	padding: 30px;
+	text-align: left;
+	z-index: 0;
 
 }
 
-ol {
+
+.players-Container ol {
 	margin: 0px;
+}
+
+.players-Container li {
+	padding: 15px;
+	margin-left: 18px;
+	font-size: 1.5em;
+}
+
+
+.teamsContainer {
+	width: 30%;
+	text-align: center;
+	margin-top: 10%;
 }

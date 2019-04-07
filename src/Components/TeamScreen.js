@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/css/main.css';
 
 
 
@@ -18,6 +19,7 @@ function shufflePlayers(arr) {
 };
 
 
+
 const TeamScreen = ({ finalPlayersList }) => {
 
     let teamA = shufflePlayers(finalPlayersList); //first half of the splited array
@@ -27,17 +29,31 @@ const TeamScreen = ({ finalPlayersList }) => {
 
 		<React.Fragment>
 
-			<ol>
-				{teamA.map( (player, index) => 
-				<li key = {index} >{player}</li>)}
-			</ol>
+			<div className="teamScreen-Container">
 
-			<br />
+				
+				<div className="teamsContainer">
+					<h2>Team A</h2>
 
-			<ol>
-				{teamB.map( (player, index) => 
-				<li key = {index} >{player}</li>)}
-			</ol>
+					<div className="players-Container">
+						<ol>
+							{teamA.map( (player, index) => <li key = {index} >{player}</li> )}
+						</ol>
+					</div>
+				</div>
+				
+				<br />
+
+				<div className="teamsContainer">
+					<h2>Team B</h2>
+					<div className="players-Container">
+						<ol>
+							{teamB.map( (player, index) => <li key = {index} >{player}</li> )}
+						</ol>
+					</div>
+				</div>
+
+			</div>
 			
 		</React.Fragment>
 	);

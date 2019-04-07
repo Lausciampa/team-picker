@@ -57,32 +57,43 @@ class App extends Component {
 
           <Route exact path="/" render = { () => (
 
-            <div className="home-mainContainer"> 
+            <div className="home-mainContainer"> {/* imagen background */}
 
-              <ol>
-                {this.state.players.map( (player, index) => 
-                <li key = {index} >{player}</li>)}
-              </ol>
+              <h1>Team Picker</h1>
+              <div className="home-formContainer">
 
+                    <div className="home-formElementsContainer">
+                    {this.state.players.length < 8 ? 
+
+                      <div>
+                        <input 
+                          onChange = {this.handleChange} 
+                          value = {this.state.name} 
+                          type = "text"
+                          placeholder = "Player's name" 
+                          maxlength = "40" 
+                          size = "25"/> 
+                        <br />
+                        <button onClick = {this.handleClick} className="button">ADD PLAYER</button>
+                      </div> : <Link to="/teams"><button className="button">FIND OUT YOUR TEAMS</button></Link>
+
+                    }
+                    </div> {/* className="home-formContainer" */}
+
+                    {!this.state.players.length ? null :                     
+                      <ul>
+                        <div className="home-PlayersContainer">
+                          {this.state.players.map( (player, index) => 
+                          <li key = {index} >{player}</li>)}
+                        </div>
+                      </ul>
+                    }
+
+              </div>
               
 
-
-              {this.state.players.length < 8 ? 
-              <div className="home-formContainer">
-                <input 
-                  onChange = {this.handleChange} 
-                  value = {this.state.name} 
-                  type = "text"
-                  placeholder = "Player's name" 
-                  maxlength = "40" 
-                  size = "25"/> 
-                <br />
-                <button onClick = {this.handleClick} className="button">ADD PLAYER</button>
-              </div> : <Link to="/teams"><button className="button">Find out your Teams</button></Link>
-              }
-            </div> 
-
-          )} />
+            </div>
+          )} /> {/*Route exact path */}
 
           <Route path="/teams" render = { () => (
             <TeamScreen finalPlayersList = {this.state.players} />
