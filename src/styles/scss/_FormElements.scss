@@ -6,7 +6,7 @@ html, body {
 
 button {
 	font-family: 'Viga', sans-serif;
-	color: white;
+	color: #FFF8E5;
 	font-size: 1.1rem;
 
 	padding: 10px 20px;
@@ -15,11 +15,12 @@ button {
 	margin: 15px;
 
 	transition: background-color 0.2s ease;
-	background-color: #68a2ff;
+	background-color: #055600;
 }
 
 button:hover {
-	background-color: pink;
+	background-color: #0044B2;
+	color: #FFF8E5;
 }
 
 

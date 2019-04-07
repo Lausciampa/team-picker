@@ -1,10 +1,8 @@
-// @import here all the individual scss files
 
-
-@import '_Backgrounds.scss'; 
+@import '_HomePage'; 
 
 @import '_FormElements.scss'; // buttons and input field
 
-@import '_PlayersLists.scss'; // containers and list items
+@import '_TeamsPage.scss'; // containers and list items
 
 @import '_Headers.scss'; // Headers and App title

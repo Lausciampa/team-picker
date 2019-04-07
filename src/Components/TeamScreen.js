@@ -42,7 +42,6 @@ const TeamScreen = ({ finalPlayersList }) => {
 					</div>
 				</div>
 				
-				<br />
 
 				<div className="teamsContainer">
 					<h2>Team B</h2>

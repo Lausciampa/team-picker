@@ -2,14 +2,11 @@ html, body {
   width: 100%;
   height: 100%; }
 
-.home-mainContainer {
-  width: 100%;
-  height: 100%; }
-
 .home-mainContainer::before {
   background-image: linear-gradient(#3D1200, #FF5A14, #A9DD66);
   background-image: url("../assets/home-BackgroundImg.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   content: "";
   display: block;
   position: absolute;
@@ -26,29 +23,6 @@ html, body {
   text-align: center;
   margin: 0px auto;
   padding-left: 20px; }
-
-html, body {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 1.2rem; }
-
-button {
-  font-family: 'Viga', sans-serif;
-  color: white;
-  font-size: 1.1rem;
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: 0px;
-  margin: 15px;
-  transition: background-color 0.2s ease;
-  background-color: #68a2ff; }
-
-button:hover {
-  background-color: pink; }
-
-input {
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 1.2rem; }
 
 .home-PlayersList {
   background-color: white;
@@ -67,10 +41,40 @@ ul {
   margin-top: 5%;
   padding: 20px; }
 
+@media only screen and (max-width: 650px) {
+  .home-mainContainer::before {
+    background-image: linear-gradient(#3D1200, #FF5A14, #A9DD66); }
+  .home-mainContainer h1 {
+    font-size: 4rem;
+    text-align: center; } }
+
+html, body {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.2rem; }
+
+button {
+  font-family: 'Viga', sans-serif;
+  color: #FFF8E5;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 0px;
+  margin: 15px;
+  transition: background-color 0.2s ease;
+  background-color: #055600; }
+
+button:hover {
+  background-color: #0044B2;
+  color: #FFF8E5; }
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2rem; }
+
 .teamScreen-Container {
   width: 100%;
   height: 100%;
-  display: flex;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: space-around; }
@@ -107,6 +111,13 @@ ul {
   width: 30%;
   text-align: center;
   margin-top: 10%; }
+
+@media only screen and (max-width: 750px) {
+  .teamScreen-Container::before {
+    background-image: linear-gradient(#2F00B2, #8154FF, #A9DD66); }
+  .teamsContainer {
+    display: block;
+    width: 80%; } }
 
 h1 {
   font-family: 'Permanent Marker', cursive;
