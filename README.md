@@ -54,15 +54,15 @@ The responsiveness of this design is something to keep working on. I found it ex
 ### Next steps:
 
 In order to meet the deadline for this project, I had to leave out some functionality that I wanted to include such as:
-> Form validation: the input shouldn't accept an empty instring as valid input. 
-> Polish responsiveness.
-> An additional feature in the second page to create again the randomnised teams (in case the user is unhappy with the inital result).
-> The user should have the option to edit or delete playes' names from the original list on the home page.
-> The user should have the option to customise the default name of the teams.
+- Form validation: the input shouldn't accept an empty instring as valid input. 
+- Polish responsiveness.
+- An additional feature in the second page to create again the randomnised teams (in case the user is unhappy with the inital result).
+- The user should have the option to edit or delete playes' names from the original list on the home page.
+- The user should have the option to customise the default name of the teams.
 
 Additionally, I want to work on the optional advanced features of this project:
-> support for n-a-side, where a list of any length can be split into two teams.
-> support for balancing of the teams, where some measure of each player's strength is used to allocate teams fairly.
+- support for n-a-side, where a list of any length can be split into two teams.
+- support for balancing of the teams, where some measure of each player's strength is used to allocate teams fairly.
 
 
 ### Conclusions:
