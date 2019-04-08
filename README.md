@@ -10,7 +10,7 @@ This is the final project of the DevelopMe_ bootcamp which took place between Ja
 - run npm install or npm i in your terminal.
 - run npm start to view on localhost:3000
 
-You can also view the live app here: 
+You can also view the live app here: https://lausciampa.github.io/team-picker-app/
 
 ### Tecnologies used:
 
