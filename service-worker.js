@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/team-picker-app/precache-manifest.d1b5707935e2843ec646bad88b883905.js"
+  "/team-picker-app/precache-manifest.80a0b11f56c9c27b2b786cf6946e814b.js"
 );
 
 workbox.clientsClaim();
