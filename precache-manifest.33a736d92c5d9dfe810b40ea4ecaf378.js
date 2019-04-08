@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/team-picker-app/static/media/home-BackgroundImg.554bb951.jpg"
   },
   {
-    "revision": "4692723bed3a2a651cc0fc9ed91d1e19",
+    "revision": "3d0220e7228d750328a1baa3c7878ce8",
     "url": "/team-picker-app/index.html"
   }
 ];
